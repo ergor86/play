@@ -6,7 +6,7 @@ test.describe('Login', () => {
     test('Login com usuario e senha vazios', async ({ page })=>{
         const tela = new TelaLogin(page);
         await tela.abrir();
-        await page.locator(loc.modalPrimeiraCompra.tela).locator(loc.modalPrimeiraCompra.fechar).click();
+        await page.locator(loc.modalPrimeiraCompra.fechar).click();
         await tela.login()
     });
 });
