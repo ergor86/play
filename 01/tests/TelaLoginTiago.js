@@ -26,6 +26,11 @@ export class TelaLogin {
         await this.page.locator( loc.entrar ).click();
     }
 
+    async tentalogarSemInformarDados() {
+        await this.page.locator(loc.formularioLogin.entrar).click();
+        await this.page.on('dialog', dialog => dialog.accept());
+    }
+
     /**
      * Verifica se é exibida  uma mensagem  contendo o texto informado
      * 
@@ -35,5 +40,9 @@ export class TelaLogin {
         const dialog = await this.page.waitForEvent( 'dialog' );
         expect( dialog.message() ).toContain( texto );
         dialog.accept();
+    }
+
+    async deveExibirCaixaDeSenhaDestacada(){
+        await expect( this.page.locator(loc.formularioLogin.senha)).toHaveCSS("background-color", "rgb(255, 186, 186)");
     }
 }

@@ -27,4 +27,9 @@ export class TelaHome {
         await this.arrastaPraBaixo(300);
         await this.page.locator(loc.produtosVitrine.primeiroProduto).click();
     }
+
+    async clicarEmFavoritarPrimeiroProdutoVitrine() {
+        await this.arrastaPraBaixo(300);
+        await this.page.locator(loc.produtosVitrine.botaoFavoritoPrimeiroProduto).click();
+    }
 }

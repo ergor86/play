@@ -16,7 +16,8 @@ const loc = {
     },
 
     produtosVitrine: {
-        primeiroProduto: '.home_produtos__list#splide01-list li.is-active:nth-child(1) figure'
+        primeiroProduto: '.home_produtos__list#splide01-list li.is-active:nth-child(1) figure',
+        botaoFavoritoPrimeiroProduto: '.home_produtos__list#splide01-list li.is-active:nth-child(1) .adicionar-lista-desejos.deslogado'
     }
 
 };
