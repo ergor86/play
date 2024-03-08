@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import { TelaLogin } from './TelaLoginTiago.js';
-import loc from '../../01/src/login/localizadores-login.js';
-import { TelaHome } from './home/TelaHome.js';
+import loc from '../../src/login/localizadores-login.js';
+import { TelaHome } from '../home/TelaHome.js';
 
 test.describe('Login', () => {
     test('Login com usuario e senha vazios', async ({ page })=>{
@@ -12,7 +12,7 @@ test.describe('Login', () => {
         await telaHome.clicarEmFavoritarPrimeiroProdutoVitrine();
         await telaLogin.tentalogarSemInformarDados();
         await telaLogin.deveExibirCaixaDeSenhaDestacada();
-        await page.waitForTimeout(3000);
+        
         
     });
 });

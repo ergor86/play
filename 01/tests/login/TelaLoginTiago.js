@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import rotas from '../../01/src/rotas.js';
-import loc from '../../01/src/login/localizadores-login.js';
+import rotas from '../../src/rotas.js';
+import loc from '../../src/login/localizadores-login.js';
 
 export class TelaLogin {
     /**
@@ -27,7 +27,7 @@ export class TelaLogin {
     }
 
     async tentalogarSemInformarDados() {
-        await this.page.locator(loc.formularioLogin.entrar).click();
+        await this.page.locator( '#form-logar-box' ).nth( 1 ).locator( 'button' ).click();
         await this.page.on('dialog', dialog => dialog.accept());
     }
 

@@ -1,5 +1,5 @@
 const rotas = {
-    home: '/index',
+    home: '/',
     login: '/cliente/acesso?continue',
 };
 

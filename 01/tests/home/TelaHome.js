@@ -14,6 +14,7 @@ export class TelaHome {
         await this.page.goto( rotas.home );
     }
 
+
     async fecharDialogoDePrimeiraCompra() {
         await this.page.locator( loc.modalPrimeiraCompra.tela )
             .locator( loc.modalPrimeiraCompra.fechar ).click();
@@ -29,7 +30,9 @@ export class TelaHome {
     }
 
     async clicarEmFavoritarPrimeiroProdutoVitrine() {
-        await this.arrastaPraBaixo(300);
+        await this.arrastaPraBaixo(400);
+        await this.page.waitForSelector(loc.produtosVitrine.botaoFavoritoPrimeiroProduto);
         await this.page.locator(loc.produtosVitrine.botaoFavoritoPrimeiroProduto).click();
     }
+    
 }

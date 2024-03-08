@@ -25,4 +25,8 @@ export class TelaProduto {
     async adicionarProdutoNaSacola() {
         await this.page.locator(loc.botaoAdicionarProdutoASacola).click();
     }
+
+    async adicioarUnidadeProduto(){
+        await this.page.getByRole('button', { name: '+' }).click();
+    }
 }

@@ -4,6 +4,7 @@ export const loc = {
         },
     
         botaoAdicionarProdutoASacola: '#form-adicionar-produtos button[type="submit"]',
-        botaoFecharDialogoComprarMaisProdutos: "#produto-adicionado.open > a.close-reveal-modal"
+        botaoFecharDialogoComprarMaisProdutos: "#produto-adicionado.open > a.close-reveal-modal",
+        botaoAdicionaItem: '#form-adicionar-produtos  section.qtdd-tabela--produto.ativo  button.plus-desk'
 };
     

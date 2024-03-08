@@ -14,6 +14,7 @@ export class TelaSacola { // POM
         this.page = page;
     }
 
+    
     async abrir() {
         const telaHome = new TelaHome( this.page );
         await telaHome.abrir();
